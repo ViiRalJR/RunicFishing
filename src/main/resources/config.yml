@@ -1,0 +1,1080 @@
+gui:
+  filler-item:
+    material: 160
+    durability: 7
+    name: " "
+  nextpage-item:
+    material: 262
+    durability: 0
+    name: "&eNext page"
+  previouspage-item:
+    material: 262
+    durability: 0
+    name: "&ePrevious page"
+# ALL PROBABILITIES MUST ADD UP TO 100%
+
+reload: "&a&l(!) &aRunicFishing has been reloaded successfully"
+
+fishing-rods:
+  top:
+    chat-title: "&e&lRunic Fishing Leaderboards"
+    chat-entry: "&f&l#%position% &e%player% &7- %amount%"
+
+  messages:
+    help:
+      - "&e&lRunic Fishing &7- &fHelp Page"
+      - ""
+      - "&e&l* &e/rods &7- opens the rods gui"
+      - "&e&l* &e/fishing shop &7- opens the shop gui"
+      - "&e&l* &e/fishing help &7- displays help menu"
+      - "&e&l* &e/fishing top &7- displays the top 10 players (caught fish)"
+      - "&e&l* &e/fishing rod <rod> <player> <maxed> &7- give a player a rod"
+      - "&e&l* &e/fishing points <player> &7- shows fishing points"
+      - "&e&l* &e/fishing fish <player> &7- shows fish amount"
+      - "&e&l* &e/rodupgrade &7- opens the upgrade gui"
+      - ""
+    invalid-world: "&c&l(!) &cYou cannot use an upgradeable fishing rod in this world."
+    catch-notice: "&a&l(!) &aYou caught %fish% which sold for %points% points + $%money%."
+    not-holding-upgradable: "&c&l(!) &cYou must be holding a upgradable fishing rod to access the upgrade menu."
+    invalid-tier: "&c&l(!) &cInvalid tier -> Valid tiers are: 0, 1, 2 & 3."
+    invalid-player: "&c&l(!) &cInvalid player -> player is either not online or nonexistent."
+    insufficient-money: "&c&l(!) &cYou have insufficient funds."
+    insufficient-points: "&c&l(!) &cYou have insufficient fishing points."
+    fish-points-notice: "&a&l(!) &a%player% has %points% fish points."
+    fish-amount-notice: "&a&l(!) &a%player% has caught %amount% fish."
+  auto-fishing:
+    interval: 5 # in seconds
+    messages:
+      started: "&e&l(!) &eYou have started auto fishing, do not retract your fishing rod, do not move either"
+      stopped: "&c&l(!) &cYou have stopped auto fishing"
+
+
+  worlds-permitted:
+    - "fishing"
+  fish-tiers:
+    0: #NORMAL
+      tiers:
+        1:
+          name: "Normal Fish I"
+          points: 3
+          money: 300
+        2:
+          name: "Normal Fish II"
+          points: 5
+          money: 500
+        3:
+          name: "Normal Fish III"
+          points: 10
+          money: 1000
+    1: #SALMON
+      tiers:
+        1:
+          name: "Salmon Fish I"
+          points: 5
+          money: 500
+        2:
+          name: "Salmon Fish II"
+          points: 10
+          money: 1000
+        3:
+          name: "Salmon Fish III"
+          points: 15
+          money: 1500
+    2: #CLOWNFISH
+      tiers:
+        1:
+          name: "Clown Fish I"
+          points: 10
+          money: 1000
+        2:
+          name: "Clown Fish II"
+          points: 15
+          money: 1500
+        3:
+          name: "Clown Fish III"
+          points: 25
+          money: 2500
+    3: #PUFFERFISH
+      tiers:
+        1:
+          name: "Puffer Fish I"
+          points: 100
+          money: 10000
+
+  rod-tiers:
+    0:
+      material: 346
+      durability: 0
+      name: "&6&lFishing Rod (&fTier 1&6&l)"
+      enchants:
+        0: 1
+      lore:
+        - "&7Catch fish to make money and points."
+        - "&7Use points to upgrade the rod by"
+        - "&7using /rodupgrade"
+        - ""
+        - "&6&lRod Enchantments"
+        - "&e&l * &eLuck %luckLevel%"
+        - "&b&l * &bDouble Catch %doubleCatchLevel%"
+        - "&6&l * &6Crate Finder %crateFinderLevel%"
+        - "&d&l * &dFish Net %fishNetLevel%"
+      hide-enchants: true
+      hide-attributes: true
+      unbreakable: true
+    1:
+      material: 346
+      durability: 0
+      name: "&6&lFishing Rod (&fTier 2&6&l)"
+      enchants:
+        0: 1
+      lore:
+        - "&7Catch fish to make money and points."
+        - "&7Use points to upgrade the rod by"
+        - "&7using /rodupgrade"
+        - ""
+        - "&eLuck %luckLevel%"
+        - "&bDoubleCatch %doubleCatchLevel%"
+        - "&6CrateFinder %crateFinderLevel%"
+        - "&dFishNet %fishNetLevel%"
+      hide-enchants: true
+      hide-attributes: true
+      unbreakable: true
+    2:
+      material: 346
+      durability: 0
+      name: "&6&lFishing Rod (&fTier 3&6&l)"
+      enchants:
+        0: 1
+      lore:
+        - "&7Catch fish to make money and points."
+        - "&7Use points to upgrade the rod by"
+        - "&7using /rodupgrade"
+        - ""
+        - "&eLuck %luckLevel%"
+        - "&bDoubleCatch %doubleCatchLevel%"
+        - "&6CrateFinder %crateFinderLevel%"
+        - "&dFishNet %fishNetLevel%"
+      hide-enchants: true
+      hide-attributes: true
+      unbreakable: true
+    3:
+      material: 346
+      durability: 0
+      name: "&cTier 3 Fishing Rod"
+      enchants:
+        0: 1
+      lore:
+        - "Use this rod for blablabla"
+        - ""
+        - "&eLuck %luckLevel%"
+        - "&bDoubleCatch %doubleCatchLevel%"
+        - "&6CrateFinder %crateFinderLevel%"
+        - "&dFishNet %fishNetLevel%"
+      hide-enchants: true
+      hide-attributes: true
+      unbreakable: true
+
+  enchants:
+    luck:
+      levels:
+        0:
+          fishing-rod-tiers:
+            0:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 20
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            1:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            2:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            3:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            4:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+        1:
+          money-cost: 100
+          points-cost: 100
+          fishing-rod-tiers:
+            0:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            1:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            2:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            3:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            4:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+        2:
+          money-cost: 100
+          points-cost: 100
+          fishing-rod-tiers:
+            0:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            1:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            2:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            3:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            4:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+        3:
+          money-cost: 100
+          points-cost: 100
+          fishing-rod-tiers:
+            0:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            1:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            2:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            3:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            4:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+        4:
+          money-cost: 100
+          points-cost: 100
+          fishing-rod-tiers:
+            0:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            1:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            2:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            3:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            4:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+        5:
+          money-cost: 100
+          points-cost: 100
+          fishing-rod-tiers:
+            0:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            1:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            2:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            3:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+            4:
+              0: #NORMAL
+                chance: 60
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              1: #SALMON
+                chance: 10
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              2: #CLOWNFISH
+                chance: 15
+                fish-tiers:
+                  1: 75
+                  2: 15
+                  3: 10
+              3: #PUFFERFISH
+                chance: 5
+                fish-tiers:
+                  1: 100
+    double-catch:
+      levels: #chances
+        0:
+          chance: 0
+          money-cost: 100
+          points-cost: 100
+        1:
+          chance: 2
+          money-cost: 100
+          points-cost: 100
+        2:
+          chance: 4
+          money-cost: 100
+          points-cost: 100
+        3:
+          chance: 6
+          money-cost: 100
+          points-cost: 100
+        4:
+          chance: 10
+          money-cost: 100
+          points-cost: 10010
+        5:
+          chance: 20
+          money-cost: 100
+          points-cost: 100
+    crate-finder:
+      command: "crate give %player% fish"
+      levels: #chances
+        0:
+          chance: 0
+          money-cost: 100
+          points-cost: 100
+        1:
+          chance: 2
+          money-cost: 100
+          points-cost: 100
+        2:
+          chance: 4
+          money-cost: 100
+          points-cost: 100
+        3:
+          chance: 6
+          money-cost: 100
+          points-cost: 100
+        4:
+          chance: 10
+          money-cost: 100
+          points-cost: 100
+        5:
+          chance: 20
+          money-cost: 100
+          points-cost: 100
+    fish-net:
+      fish-amount: 4
+      levels: #chances
+        0:
+          chance: 0
+          money-cost: 100
+          points-cost: 100
+        1:
+          chance: 2
+          money-cost: 100
+          points-cost: 100
+        2:
+          chance: 4
+          money-cost: 100
+          points-cost: 100
+        3:
+          chance: 6
+          money-cost: 100
+          points-cost: 100
+        4:
+          chance: 10
+          money-cost: 100
+          points-cost: 100
+        5:
+          chance: 20
+          money-cost: 100
+          points-cost: 100
+
+  gui:
+    rods:
+      size: 3
+      title: "&8Rods Gui"
+      fill-empty-slots: true
+      items:
+        0:
+          material: 46
+          durability: 0
+          quantity: 33
+          name: "&cTNT"
+          enchants:
+            0: 5
+            33: 2
+          lore:
+            - "&7This is a piece"
+            - "&7of TNT."
+          hide-enchants: true
+          hide-attributes: true
+          money-cost: 100
+          points-cost: 100
+          command: "fishing rod 0 %player%"
+    shop:
+      size: 3
+      title: "&8Fishing Shop Gui"
+      fill-empty-slots: true
+      items:
+        0:
+          material: 46
+          durability: 0
+          quantity: 33
+          name: "&cTNT"
+          enchants:
+            0: 5
+            33: 2
+          lore:
+            - "&7This is a piece"
+            - "&7of TNT."
+          hide-enchants: true
+          hide-attributes: true
+          money-cost: 100
+          points-cost: 100
+          command: "fishing rod 0 %player%"
+    upgrade:
+      size: 3
+      title: "&8Fishing Upgrade Gui"
+      fill-empty-slots: true
+      items:
+        luck:
+          slot: 11
+          material: 46
+          durability: 0
+          quantity: 33
+          name: "&cluck"
+          enchants:
+            0: 5
+            33: 2
+          lore:
+            - "%money%"
+            - "%points%"
+            - "%level%"
+          hide-enchants: true
+          hide-attributes: true
+        doubleCatch:
+          slot: 12
+          material: 46
+          durability: 0
+          quantity: 33
+          name: "&cdoubleCatch"
+          enchants:
+            0: 5
+            33: 2
+          lore:
+            - "%money%"
+            - "%points%"
+            - "%level%"
+          hide-enchants: true
+          hide-attributes: true
+        crateFinder:
+          slot: 14
+          material: 46
+          durability: 0
+          quantity: 33
+          name: "&ccrateFinder"
+          enchants:
+            0: 5
+            33: 2
+          lore:
+            - "%money%"
+            - "%points%"
+            - "%level%"
+          hide-enchants: true
+          hide-attributes: true
+        fishNet:
+          slot: 15
+          material: 46
+          durability: 0
+          quantity: 33
+          name: "&cfishNet"
+          enchants:
+            0: 5
+            33: 2
+          lore:
+            - "%money%"
+            - "%points%"
+            - "%level%"
+          hide-enchants: true
+          hide-attributes: true

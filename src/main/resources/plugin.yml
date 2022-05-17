@@ -1,0 +1,23 @@
+name: RunicFishing
+version: '${project.version}'
+main: me.viiral.runicfishing.RunicFishing
+description: FishingCore for Runic
+authors: [ ViiRal ]
+depend: [Vault, PlaceholderAPI]
+softdepend: [ ]
+commands:
+  freload:
+    description: reload the plugin
+  fishing:
+    description: fishing command
+    permission: runicfishing.fishing
+  rods:
+    description: Access the rods gui
+    permission: runicfishing.rods
+  rodupgrade:
+    description: Access the upgrade gui
+    permission: runicfishing.rodupgrade
+  fishingpoints:
+    description: Shows the fishing points
+    permission: runicfishing.fishingpoints
+
